@@ -40,14 +40,29 @@ describe("Testing single letter translations", () => {
 // Testing random words to see if they translate correctly
 describe("Testing word translations", () => {
   
-  it("Should translate hello to '.... . .-.. .-.. ---'", () => {
+  it("Should translate 'hello' to '.... . .-.. .-.. ---'", () => {
     const result = morseTranslator("hello");
     expect(result).toBe(".... . .-.. .-.. ---");
   });
   
-  it("Should translate world to '.-- --- .-. .-.. -..'", () => {
+  it("Should translate 'world' to '.-- --- .-. .-.. -..'", () => {
     const result = morseTranslator("world");
     expect(result).toBe(".-- --- .-. .-.. -..");
+  });
+
+});
+
+// Testing sentences to see if they translate correctly
+describe("Testing sentence translations", () => {
+  
+  it("Should translate 'hello world' to '.... . .-.. .-.. --- / .-- --- .-. .-.. -..'", () => {
+    const result = morseTranslator("hello world");
+    expect(result).toBe(".... . .-.. .-.. --- / .-- --- .-. .-.. -..");
+  });
+  
+  it("Should translate 'this is a sentence' to '- .... .. ... / .. ... / .- / ... . -. - . -. -.-. .'", () => {
+    const result = morseTranslator("this is a sentence");
+    expect(result).toBe("- .... .. ... / .. ... / .- / ... . -. - . -. -.-. .");
   });
 
 });

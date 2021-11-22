@@ -4,7 +4,9 @@ export const morseTranslator = (word) => {
     ["a", ".-"], ["b", "-..."], ["c", "-.-."], ["d", "-.."], ["e", "."], ["f", "..-."], ["g", "--."], ["h", "...."], ["i", ".."], ["j", ".---"], ["k", ".-."], ["l", ".-.."], ["m", "--"], ["n", "-."], ["o", "---"], ["p", ".--."], ["q", "--.-"], ["r", ".-."], ["s", "..."], ["t", "-"], ["u", "..-"], ["v", "...-"], ["w", ".--"], ["x", "-..-"], ["y", "-.--"], ["z", "--.."], [" ", "/"]
   ];
 
-  const letterArr = word.split("");
+  const wordLC = word.toLowerCase();
+
+  const letterArr = wordLC.split("");
 
   const letterMorseArr = letterArr.map((w) => {
     const translate = morseDictionary.filter((l) => {
