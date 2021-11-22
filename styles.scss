@@ -4,18 +4,14 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  background-color: $secondaryColor;
 }
-
-// body {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// }
 
 .main-header {
   font-family: $primaryFont;
   text-align: center;
-  margin: 50px 0 30px 0;
+  margin: 50px 0;
+  color: $primaryColor;
 }
 
 .translator {
@@ -26,24 +22,95 @@
   margin-left: auto;
   margin-right: auto;
   font-family: $primaryFont;
+  color: $primaryColor;
+  border: 1px solid $primaryColor;
+  padding: 20px 0 30px 0;
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+  }
 
   &__label {
     margin: 20px 0 5px 0;
     font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  &__label:first-child {
+    margin-top: 0;
   }
 
   &__text-area {
     width: 250px;
     height: 100px;
     font-family: $secondaryFont;
-    font-size: 1em;
+    font-size: 1.25em;
+    border: 1px solid $primaryColor;
+    background-color: $primaryColor;
+    color: $quatenaryColor;
+    font-weight: bold;
+    padding: 10px;
   }
 
-  &__submit {
+  &__btn {
     padding: 10px;
     font-size: 1em;
     font-family: $primaryFont;
     font-weight: bold;
-    margin-top: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
   }
+
+  #submitBtn {
+    margin-left: 5px;
+    background-color: $tertiaryColor;
+    color: $quatenaryColor;
+  }
+
+  #clearBtn {
+    margin-right: 5px;
+    background-color: $quatenaryColor;
+    color: $tertiaryColor;
+  }
+
+  #submitBtn:hover, #clearBtn:hover {
+    cursor: pointer;
+    background-color: $primaryColor;
+  }
+}
+
+
+@media screen and (min-width: 700px) {
+  .translator {
+    flex-direction: row;
+    justify-content: center;
+    border: none;
+
+    &__text-area {
+      width: 200px;
+      height: 200px;
+    }
+
+    &__buttons {
+      display: flex;
+      flex-direction: column;
+      margin: 0px 20px;
+      align-items: center;
+    }
+
+    &__btn {
+      margin-top: 0;
+    }
+
+    #submitBtn {
+      margin-top: 5px;
+      margin-left: 0px;
+    }
+
+    #clearBtn {
+      margin-right: 0px;
+    }
+  }
+
 }

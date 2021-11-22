@@ -16,13 +16,24 @@
   
   <main class="translator">
 
-    <label for="english-input" class="translator__label">English</label>
-    <textarea name="english-input" class="translator__text-area" id="translatorInput" cols="30" rows="5"></textarea>
+    <div class="translator__section">
+      <label for="english-input" class="translator__label">English</label>
+      <textarea name="english-input" class="translator__text-area" id="translatorInput" cols="30" rows="5"></textarea>
+    </div>    
 
-    <button class="translator__submit" translator__label>Translate</button>
+    <div class="translator__buttons">
+      <button class="translator__btn" id="clearBtn">Clear</button>
+      <button class="translator__btn" id="submitBtn">Translate</button>
+    </div>
 
-    <label for="morse-output" class="translator__label">Morse</label>
-    <textarea name="morse-output" class="translator__text-area" id="translatorOutput" cols="30" rows="5" disabled></textarea>
+    <div class="translator__section">
+      <label for="morse-output" class="translator__label">Morse</label>
+      <textarea name="morse-output" class="translator__text-area" id="translatorOutput" cols="30" rows="5" disabled></textarea>
+    </div>
+
+    
+
+    
 
   </main>
 

@@ -33,7 +33,8 @@ export const morseTranslator = (word) => {
 
 const englishInput = document.querySelector("#translatorInput");
 const morseOutput = document.querySelector("#translatorOutput");
-const submitBtn = document.querySelector(".translator__submit");
+const submitBtn = document.querySelector("#submitBtn");
+const clearBtn = document.querySelector("#clearBtn");
 
 const handleTranslateClick = () => {
   const input = englishInput.value;
@@ -41,6 +42,13 @@ const handleTranslateClick = () => {
   morseOutput.value = output;
 }
 
+const handleClearClick = () => {
+  englishInput.value = "";
+  morseOutput.value = "";
+}
+
 submitBtn.addEventListener("click", handleTranslateClick);
+clearBtn.addEventListener("click", handleClearClick);
+
 
 
