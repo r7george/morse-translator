@@ -6,6 +6,7 @@ import { it, expect, describe } from "@jest/globals";
 
 // Testing random letters to see if they translate correctly
 describe("Testing single letter translations", () => {
+
   it("Should translate a to .-", () => {
     const result = morseTranslator("a");
     expect(result).toBe(".-");
@@ -35,6 +36,7 @@ describe("Testing single letter translations", () => {
     const result = morseTranslator("y");
     expect(result).toBe("-.--");
   });
+
 });
 
 // Testing random words to see if they translate correctly
@@ -63,6 +65,21 @@ describe("Testing sentence translations", () => {
   it("Should translate 'this is a sentence' to '- .... .. ... / .. ... / .- / ... . -. - . -. -.-. .'", () => {
     const result = morseTranslator("this is a sentence");
     expect(result).toBe("- .... .. ... / .. ... / .- / ... . -. - . -. -.-. .");
+  });
+
+});
+
+// Testing for capitalisation errors
+describe("Testing to see whether capitalisation makes a difference", () => {
+
+  it("Should translate 'HeLlO' to '.... . .-.. .-.. ---'", () => {
+    const result = morseTranslator("HeLlO");
+    expect(result).toBe(".... . .-.. .-.. ---");
+  });
+  
+  it("Should translate 'wORLd' to '.-- --- .-. .-.. -..'", () => {
+    const result = morseTranslator("wORLd");
+    expect(result).toBe(".-- --- .-. .-.. -..");
   });
 
 });
