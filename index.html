@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Morse converter</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <h1 class="main-header">English to Morse translator</h1>
+  
+  <main class="translator">
+
+    <label for="english-input" class="translator__label">English</label>
+    <textarea name="english-input" class="translator__text-area" id="translatorInput" cols="30" rows="10"></textarea>
+
+    <button class="translator__submit" translator__label>Translate</button>
+
+    <label for="morse-output">Morse</label>
+    <textarea name="morse-output" class="translator__text-area" id="translatorOutput" cols="30" rows="10"></textarea>
+    
+  </main>
+
+  <script src="./translate.js" type="module"></script>
+</body>
+</html>
