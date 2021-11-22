@@ -1,4 +1,4 @@
-import { translator } from "./translate.js";
+import { morseTranslator } from "./translate.js";
 import { it, expect, describe } from "@jest/globals";
 
 // Need to write tests to translate english to morse
