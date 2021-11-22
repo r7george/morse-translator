@@ -1,16 +1,23 @@
 // need to create an array of translation for english to morse within the function
-export const morseTranslator = (letter) => {
+export const morseTranslator = (word) => {
   const morseDictionary = [
-    ["a", ".-"], ["b", "-..."], ["c", "-.-."], ["d", "-.."], ["e", "."], ["f", "..-."], ["g", "--."], ["h", "...."], ["i", ".."], ["j", ".---"], ["k", ".-."], ["l", ".-.."], ["m", "--"], ["n", "-."], ["o", "---"], ["p", ".--."], ["q", "--.-"], ["r", ".-."], ["s", "..."], ["t", "-"], ["u", "..-"], ["v", "...-"], ["w", ".--"], ["x", "-..-"], ["y", "-.--"], ["z", "--.."]
+    ["a", ".-"], ["b", "-..."], ["c", "-.-."], ["d", "-.."], ["e", "."], ["f", "..-."], ["g", "--."], ["h", "...."], ["i", ".."], ["j", ".---"], ["k", ".-."], ["l", ".-.."], ["m", "--"], ["n", "-."], ["o", "---"], ["p", ".--."], ["q", "--.-"], ["r", ".-."], ["s", "..."], ["t", "-"], ["u", "..-"], ["v", "...-"], ["w", ".--"], ["x", "-..-"], ["y", "-.--"], ["z", "--.."], [" ", "/"]
   ];
 
-  const translate = morseDictionary.map((l) => {
-    if(l.includes(letter)) return l[1];
+  const letterArr = word.split("");
+
+  const letterMorseArr = letterArr.map((w) => {
+    const translate = morseDictionary.filter((l) => {
+      if(l.includes(w)) return l;
+    })
+    return translate;
   });
 
-  const translateFilter = translate.filter((l) => {
-    return l != null;
-  });
+  const morseArr = letterMorseArr.map((l) => {
+    return l[0][1];
+  })
 
-  return translateFilter.toString();
+  const morseString = morseArr.join(" ");
+  
+  return morseString;  
 }

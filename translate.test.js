@@ -39,6 +39,7 @@ describe("Testing single letter translations", () => {
 
 // Testing random words to see if they translate correctly
 describe("Testing word translations", () => {
+  
   it("Should translate hello to '.... . .-.. .-.. ---'", () => {
     const result = morseTranslator("hello");
     expect(result).toBe(".... . .-.. .-.. ---");
