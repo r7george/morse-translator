@@ -83,3 +83,18 @@ describe("Testing to see whether capitalisation makes a difference", () => {
   });
 
 });
+
+// Testing for only alphabet and spaces within input
+describe("Testing for alphabet/space as inputs", () => {
+
+  it("Should translate 'Hi!' to 'Invalid Input'", () => {
+    const result = morseTranslator("Hi!");
+    expect(result).toBe("Invalid Input");
+  });
+  
+  it("Should translate '12345' to 'Invalid Input'", () => {
+    const result = morseTranslator("12345");
+    expect(result).toBe("Invalid Input");
+  });
+
+});

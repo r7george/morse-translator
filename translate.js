@@ -10,24 +10,30 @@ export const morseTranslator = (word) => {
 
   // to split the input word/s into an array
   const letterArr = wordLC.split("");
-
-  // get an array (within an array) or all the morse code translations
-  const letterMorseArr = letterArr.map((w) => {
-    const translate = morseDictionary.filter((l) => {
-      if(l.includes(w)) return l;
-    })
-    return translate;
-  });
-
-  // access the required morse translation
-  const morseArr = letterMorseArr.map((l) => {
-    return l[0][1];
-  })
-
-  // making the array into a string with a space between
-  const morseString = morseArr.join(" ");
   
-  return morseString;  
+  // checking whether it's only alphabets & space being entered
+  if (/^[A-Za-z ]+$/.test(wordLC)) {
+    // get an array (within an array) or all the morse code translations
+    const letterMorseArr = letterArr.map((w) => {
+      const translate = morseDictionary.filter((l) => {
+        if(l.includes(w)) return l;
+      })
+      return translate;
+    });
+
+    // access the required morse translation
+    const morseArr = letterMorseArr.map((l) => {
+      return l[0][1];
+    })
+
+    // making the array into a string with a space between
+    const morseString = morseArr.join(" ");
+    
+    return morseString;  
+  }
+  else {
+    return `Invalid Input`;
+  }
 }
 
 
