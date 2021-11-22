@@ -29,3 +29,18 @@ export const morseTranslator = (word) => {
   
   return morseString;  
 }
+
+
+const englishInput = document.querySelector("#translatorInput");
+const morseOutput = document.querySelector("#translatorOutput");
+const submitBtn = document.querySelector(".translator__submit");
+
+const handleTranslateClick = () => {
+  const input = englishInput.value;
+  const output = morseTranslator(input);
+  morseOutput.value = output;
+}
+
+submitBtn.addEventListener("click", handleTranslateClick);
+
+

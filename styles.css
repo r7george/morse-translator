@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main-header {
+  font-family: "Libre Baskerville", serif;
+  text-align: center;
+  margin: 50px 0 30px 0;
+}
+
+.translator {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Libre Baskerville", serif;
+}
+.translator__label {
+  margin: 20px 0 5px 0;
+  font-size: 1.5em;
+}
+.translator__text-area {
+  width: 250px;
+  height: 100px;
+  font-family: "Inter", sans-serif;
+  font-size: 1em;
+}
+.translator__submit {
+  padding: 10px;
+  font-size: 1em;
+  font-family: "Libre Baskerville", serif;
+  font-weight: bold;
+  margin-top: 20px;
+}
