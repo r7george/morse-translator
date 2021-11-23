@@ -29,6 +29,11 @@ const handleClearClick = () => {
 }
 
 const handleSwitchClick = () => {
+  const inputJS = input.value;
+  const outputJS = output.value;
+  input.value = outputJS;
+  output.value = inputJS;
+  
   if(labels[0].innerHTML == "English") {
     labels[0].innerHTML = "Morse";
     labels[1].innerHTML = "English";
