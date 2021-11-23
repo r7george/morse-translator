@@ -1,4 +1,4 @@
-import { morseTranslator } from "./translate.js";
+import { englishTranslator } from "./translate.js";
 
 const englishInput = document.querySelector("#translatorInput");
 const morseOutput = document.querySelector("#translatorOutput");
@@ -7,7 +7,7 @@ const clearBtn = document.querySelector("#clearBtn");
 
 const handleTranslateClick = () => {
   const input = englishInput.value;
-  const output = morseTranslator(input);
+  const output = englishTranslator(input);
   morseOutput.value = output;
 }
 
