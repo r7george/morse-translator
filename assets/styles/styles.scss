@@ -62,6 +62,16 @@
     border-radius: 5px;
   }
 
+  .fas {
+    font-size: 1em;
+    
+    background-color: $primaryColor;
+  }
+
+  #switchBtn {
+    background-color: $primaryColor;color: $quatenaryColor;
+  }
+
   #submitBtn {
     margin-left: 5px;
     background-color: $tertiaryColor;
@@ -77,6 +87,10 @@
   #submitBtn:hover, #clearBtn:hover {
     cursor: pointer;
     background-color: $primaryColor;
+  }
+
+  #switchBtn:hover, .fas:hover {
+    cursor: pointer;
   }
 }
 

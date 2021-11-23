@@ -55,6 +55,14 @@
   margin: 20px 0;
   border-radius: 5px;
 }
+.translator .fas {
+  font-size: 1em;
+  background-color: #EEEEEE;
+}
+.translator #switchBtn {
+  background-color: #EEEEEE;
+  color: #222831;
+}
 .translator #submitBtn {
   margin-left: 5px;
   background-color: #00ADB5;
@@ -68,6 +76,9 @@
 .translator #submitBtn:hover, .translator #clearBtn:hover {
   cursor: pointer;
   background-color: #EEEEEE;
+}
+.translator #switchBtn:hover, .translator .fas:hover {
+  cursor: pointer;
 }
 
 @media screen and (min-width: 700px) {
