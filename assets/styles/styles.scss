@@ -4,18 +4,17 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: $secondaryColor;
 }
 
 .main-header {
   font-family: $primaryFont;
   text-align: center;
   margin: 50px 0;
-  color: $primaryColor;
+  color: $secondaryColor;
 }
 
 .translator {
-  width: 80%;
+  width: min-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,8 +22,9 @@
   margin-right: auto;
   font-family: $primaryFont;
   color: $primaryColor;
-  border: 1px solid $primaryColor;
-  padding: 20px 0 30px 0;
+  background-color: $secondaryColor;
+  padding: 30px 40px 40px 40px;
+  border-radius: 10px;
 
   &__section {
     display: flex;
@@ -46,11 +46,12 @@
     height: 100px;
     font-family: $secondaryFont;
     font-size: 1.25em;
-    border: 1px solid $primaryColor;
+    border: none;
     background-color: $primaryColor;
     color: $quatenaryColor;
     font-weight: bold;
     padding: 10px;
+    border-radius: 10px;
   }
 
   &__btn {
@@ -59,7 +60,7 @@
     font-family: $primaryFont;
     font-weight: bold;
     margin: 20px 0;
-    border-radius: 5px;
+    border-radius: 10px;
   }
 
   .fas {

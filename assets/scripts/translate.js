@@ -64,5 +64,3 @@ export const morseTranslator = (morsePhrase) => {
     return `Invalid Input`;
   }
 }
-
-
